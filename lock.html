@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotgram - Lock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Kanit', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5vw;
+            margin: 0;
+        }
+
+        .highlight {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+
+        .coin {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+
+        .trial {
+            color: #ffff00;
+            font-weight: bold;
+        }
+
+        .description {
+            margin-top: 2vw;
+            font-size: 4vw;
+        }
+
+        .button {
+            margin-top: 5vw;
+            padding: 1.5vw 2vw;
+            background-color: #ff69b4;
+            color: #ffffff;
+            font-size: 4vw;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1vw;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff85c1;
+        }
+
+        .button-icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            background-color: #ffffff;
+            mask: url('play-icon.svg') no-repeat center;
+            mask-size: contain;
+            -webkit-mask: url('play-icon.svg') no-repeat center;
+            -webkit-mask-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>To continue using <span class="highlight">Hotgram 🍓</span> service</h1>
+        <h1>you need at least <span class="coin">100 000 Hotgram coins</span></h1>
+    </div>
+
+    <div class="description">
+        <p>Connect your wallet <span class="highlight">NOW</span></p>
+        <p>and get <span class="trial">30 DAYS of Free Trial!</span></p>
+    </div>
+
+    <button class="button" onclick="connectWallet()">
+        Connect
+    </button>
+
+    <script>
+        function connectWallet() {
+            alert('Connecting to wallet...');
+        }
+    </script>
+</body>
+</html>

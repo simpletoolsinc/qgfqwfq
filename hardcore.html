@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotgram - Category Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            overflow-y: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        .header .logo {
+            font-size: 6vw;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+
+        .header .logo span {
+            color: #ffffff;
+        }
+
+        .header .logo::after {
+            content: " 🍓";
+        }
+
+        .content {
+            padding: 5vw;
+        }
+
+        .title-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-left: 2vw;
+        }
+
+        .title-bar h1 {
+            font-size: 5vw;
+            text-align: center;
+            margin: 0 auto;
+            transform: translateX(-10vw);
+        }
+
+        .back-button {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 4vw;
+            padding: 2vw 4vw;
+            background-color: #ff69b4;
+            border-radius: 5px;
+        }
+
+        .video-block {
+            display: flex;
+            align-items: center;
+            background-color: #2a2a2a;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            height: 20vw;
+            cursor: pointer;
+        }
+
+        .video-block img {
+            width: 25vw;
+            height: 15vw;
+            border-radius: 8px;
+            margin-right: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .video-block .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden;
+        }
+
+        .video-block .info h2 {
+            font-size: 4vw;
+            margin: 0 0 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .video-block .info p {
+            font-size: 3vw;
+            margin: 0;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+    <script>
+        function openLockPage() {
+            window.location.href = 'lock.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Hot<span>gram</span></div>
+    </div>
+
+    <div class="content">
+        <div class="title-bar">
+            <a href="index.html" class="back-button">Back</a>
+            <h1>Hardcore</h1>
+        </div>
+
+        <!-- 15 video blocks -->
+        <script>
+            const videoData = [
+                {title: "Steamy Room Service", desc: "She called for towels, but got much more than she expected..."},
+                {title: "Boss's Naughty Assistant", desc: "Overtime takes on a whole new meaning in the office tonight!"},
+                {title: "Poolside Temptation", desc: "Hot sun, wet bodies, and no one around to stop them..."},
+                {title: "Step-Sis Caught!", desc: "He walked in at the wrong time, but she didn't want him to leave..."},
+                {title: "Maid For Pleasure", desc: "She came to clean, but ended up making a much bigger mess!"},
+                {title: "Private Yoga Session", desc: "Bending over backwards for more than just fitness..."},
+                {title: "Lust in the Library", desc: "They should be quiet, but passion can't be contained..."},
+                {title: "Stranger At The Door", desc: "A delivery guy gets the tip of his life!"},
+                {title: "Hot Wife's Secret", desc: "She loves her husband... but craves something extra on the side."},
+                {title: "Backseat Confessions", desc: "A late-night ride turns into an unforgettable experience..."},
+                {title: "Shy Girl Gone Wild", desc: "She was innocent... until he showed her a different world!"},
+                {title: "One Night, No Rules", desc: "They agreed to forget names and just enjoy the night..."},
+                {title: "Forbidden Lust", desc: "He knows he shouldn't, but he just can't resist her..."},
+                {title: "Hotel Heat", desc: "What happens in the penthouse suite stays in the penthouse suite..."},
+                {title: "Naughty Nurse", desc: "Her bedside manner is unlike anything you've ever seen!"}
+            ];
+
+            document.write('<div class="video-list">');
+            videoData.forEach((video, index) => {
+                document.write(`
+                    <div class="video-block" onclick="openLockPage()">
+                        <img src="category-${index + 1}.png" alt="Video thumbnail">
+                        <div class="info">
+                            <h2>${video.title}</h2>
+                            <p>${video.desc}</p>
+                        </div>
+                    </div>
+                `);
+            });
+            document.write('</div>');
+        </script>
+    </div>
+</body>
+</html>
